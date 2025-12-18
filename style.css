@@ -469,7 +469,7 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .hero-left, .avatar {
     margin-top: 40px;
   }
