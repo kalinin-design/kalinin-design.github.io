@@ -3,7 +3,7 @@
     --text: #111111;
     --muted: rgba(17, 17, 17, .65);
     --hairline: rgba(17, 17, 17, .12);
-    --link: #111111;
+    --link: #d10000;
 
     --max: 760px;
     --padX: clamp(16px, 4vw, 28px);
@@ -25,10 +25,11 @@ body{
 
 a{
     color: var(--link);
-    text-decoration-thickness: 1px;
+    font-weight: 300;
+    text-decoration: none;
     text-underline-offset: 3px;
 }
-a:hover{ text-decoration-thickness: 2px; }
+a:hover{ text-decoration: underline; }
 
 ::selection{ background: rgba(17, 17, 17, .12); }
 
@@ -58,10 +59,11 @@ a:hover{ text-decoration-thickness: 2px; }
     color: var(--text);
     opacity: .9;
 }
-.nav__link:hover{ opacity: 1; text-decoration: underline; }
+.nav__link:hover{ opacity: 1; text-decoration: underline; color: var(--link) }
 .nav__link--active{
     opacity: 1;
     text-decoration: underline;
+    color: var(--link);
 }
 
 .nav__sep{
