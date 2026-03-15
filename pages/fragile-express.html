@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сервис доставки</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+	<div class="page">
+		<div class="container">
+			<nav class="project-page-nav">
+				<a href="../index.html#web" class="project-page-nav-link">← Все проекты</a>
+			</nav>
+			<div class="project-main">
+				<h1 class="project-title">Fragile Express. Сервис доставки хрупких посылок по России</h1>
+				<div class="step-desc">
+					<p>Fragile Express — это сервис доставки,&nbsp;который позволяет быстро рассчитать стоимость отправки,
+						оформить доставку онлайн и&nbsp;отслеживать посылку на&nbsp;каждом этапе.<br>
+						Пользователь может выбрать удобный способ отправки — вызвать курьера или&nbsp;привезти посылку в&nbsp;отделение —
+						а&nbsp;также выбрать способ получения.
+						Основная задача сервиса — сделать процесс отправки посылки максимально простым и&nbsp;прозрачным.</p>
+				</div>
+				<div class="work-thumb-wrap img-border mt50">
+					<img src="../images/главная.png" class="work-thumb" alt="FE главная страница">
+				</div>
+				<p class="image-caption">Главная страница сервиса</p>
+
+				<h2 class="step-heading">Проблема</h2>
+				<div class="step-desc">
+					<p class="mb0">Отправка посылок через традиционные службы доставки часто неудобна.
+						Пользователь сталкивается с&nbsp;несколькими проблемами:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— стоимость доставки непонятна до оформления,</li>
+						<li class="step-desc-list-item lh16">— необходимо ехать в отделение,</li>
+						<li class="step-desc-list-item lh16">— сложно выбрать способ доставки,</li>
+						<li class="step-desc-list-item lh16">— оформление занимает много времени.</li>
+					</ul>
+					<p>
+						Особенно сложно отправлять хрупкие вещи — электронику, стекло или&nbsp;технику.
+						Такие посылки требуют аккуратной упаковки и&nbsp;надежной доставки.
+						Поэтому важно создать сервис, который&nbsp;позволит оформить отправку быстро и&nbsp;безопасно.
+					</p>
+				</div>
+
+				<h2 class="step-heading">Решение</h2>
+				<div class="step-desc">
+					<p class="mb0">Fragile Express — сервис доставки хрупких посылок, который позволяет оформить отправку полностью онлайн.</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— рассчитать стоимость доставки заранее,</li>
+						<li class="step-desc-list-item lh16">— выбрать способ отправки и&nbsp;получения,</li>
+						<li class="step-desc-list-item lh16">— указать данные отправителя и&nbsp;получателя,</li>
+						<li class="step-desc-list-item lh16">— оплатить доставку онлайн,</li>
+						<li class="step-desc-list-item lh16">— отслеживать посылку на&nbsp;каждом этапе.</li>
+					</ul>
+					<p>Весь процесс занимает несколько минут.</p>
+				</div>
+				<h2 class="step-heading">Основной пользовательский флоу</h2>
+				<div class="step-desc">
+					<p>Чтобы спроектировать сервис, я&nbsp;сначала собрал полный пользовательский сценарий.</p>
+					<p class="mb0">Пользователь проходит несколько шагов:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— расчёт доставки,</li>
+						<li class="step-desc-list-item lh16">— оформление отправки,</li>
+						<li class="step-desc-list-item lh16">— оплата,</li>
+						<li class="step-desc-list-item lh16">— подтверждение заказа,</li>
+						<li class="step-desc-list-item lh16">— отслеживание доставки.</li>
+					</ul>
+					<p>Ниже показан полный флоу сервиса.</p>
+				</div>
+
+				<div class="flow-scroll">
+					<img src="../images/флоу.webp" class="flow-image" alt="FE пользовательский флоу">
+				</div>
+				<p class="image-caption">Полный флоу сервиса</p>
+
+				<h2 class="step-heading">Расчёт доставки</h2>
+				<div class="step-desc">
+					<p class="mb0">На&nbsp;первом этапе пользователь вводит параметры отправки:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— город отправления,</li>
+						<li class="step-desc-list-item lh16">— город назначения,</li>
+						<li class="step-desc-list-item lh16">— размер посылки,</li>
+						<li class="step-desc-list-item lh16">— тип груза.</li>
+					</ul>
+					<p>После этого сервис сразу показывает стоимость и&nbsp;срок доставки.</p>
+					<p class="mb0">Стоимость рассчитывается прозрачно. Пользователь видит:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— базовый тариф,</li>
+						<li class="step-desc-list-item lh16">— стоимость за&nbsp;расстояние,</li>
+						<li class="step-desc-list-item lh16">— доплату за&nbsp;хрупкий груз.</li>
+					</ul>
+					<p>Это помогает понять, из&nbsp;чего складывается итоговая цена.</p>
+				</div>
+
+				<div class="work-thumb-wrap img-border">
+					<img src="../images/результатрасчёта.webp" class="work-thumb" alt="FE расчёт доставки">
+				</div>
+				<p class="image-caption">Страница расчёта стоимости доставки</p>
+
+				<h2 class="step-heading">Состояния расчёта</h2>
+				<div class="step-desc">
+					<p class="mb0">Для расчёта предусмотрены разные состояния интерфейса:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— загрузка,</li>
+						<li class="step-desc-list-item lh16">— пересчёт стоимости,</li>
+						<li class="step-desc-list-item lh16">— ошибка сервиса,</li>
+						<li class="step-desc-list-item lh16">— недоступность курьерской доставки в&nbsp;районе пользователя.</li>
+					</ul>
+					<p>Такие состояния помогают пользователю понимать, что происходит в&nbsp;системе, и&nbsp;не&nbsp;теряться в&nbsp;процессе.</p>
+				</div>
+
+				<div class="flow-scroll">
+					<img src="../images/состояния-расчёта.webp" class="flow-image" alt="FE состояния расчёта">
+				</div>
+				<p class="image-caption">Состояния расчёта</p>
+
+				<h2 class="step-heading">Выбор способа отправки</h2>
+				<div class="step-desc">
+					<p class="mb0">После расчёта пользователь может выбрать удобный способ отправки:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— курьер заберёт посылку,</li>
+						<li class="step-desc-list-item lh16">— сдать посылку в&nbsp;отделение.</li>
+					</ul>
+					<p class="mb0">Также можно выбрать способ получения:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— доставка курьером,</li>
+						<li class="step-desc-list-item lh16">— получение в&nbsp;пункте выдачи.</li>
+					</ul>
+					<p>Для каждого варианта показывается срок доставки. Это&nbsp;помогает пользователю выбрать наиболее удобный сценарий.</p>
+				</div>
+
+				<h2 class="step-heading">Оформление отправки</h2>
+				<div class="step-desc">
+					<p>На&nbsp;следующем шаге пользователь заполняет данные отправителя и&nbsp;получателя.</p>
+					<p class="mb0">Форма включает:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— имя отправителя,</li>
+						<li class="step-desc-list-item lh16">— телефон и&nbsp;email,</li>
+						<li class="step-desc-list-item lh16">— адрес забора,</li>
+						<li class="step-desc-list-item lh16">— данные получателя,</li>
+						<li class="step-desc-list-item lh16">— адрес доставки,</li>
+						<li class="step-desc-list-item lh16">— дату и&nbsp;временной слот.</li>
+					</ul>
+					<p>Я&nbsp;разделил форму на&nbsp;понятные логические блоки, чтобы&nbsp;уменьшить когнитивную нагрузку и&nbsp;сделать сценарий предсказуемым.</p>
+				</div>
+
+				<h2 class="step-heading">Выбор пункта выдачи</h2>
+				<div class="step-desc">
+					<p>Если пользователь выбирает отправку через отделение, он&nbsp;может выбрать ближайший пункт сдачи.</p>
+					<p class="mb0">Для этого я&nbsp;использовал:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— карту,</li>
+						<li class="step-desc-list-item lh16">— список ближайших отделений,</li>
+						<li class="step-desc-list-item lh16">— поиск по&nbsp;адресу.</li>
+					</ul>
+					<p class="mb0">Каждый пункт показывает:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— расстояние,</li>
+						<li class="step-desc-list-item lh16">— адрес,</li>
+						<li class="step-desc-list-item lh16">— часы работы.</li>
+					</ul>
+					<p>Так пользователь может быстро выбрать удобное отделение рядом с&nbsp;собой.</p>
+				</div>
+
+				<div class="works-grid">
+					<div class="work-thumb-wrap">
+						<img src="../images/оформ-кур.png" class="work-thumb img-border" alt="FE оформление отправки">
+						<p class="image-caption">Страница оформления отправки курьером</p>
+					</div>
+					<div class="work-thumb-wrap">
+						<img src="../images/оформ-пвз.png" class="work-thumb img-border" alt="FE оформление отправки">
+						<p class="image-caption">Страница оформления отправки через ПВЗ</p>
+					</div>
+				</div>
+
+				<h2 class="step-heading">Адресная книга и автоподбор</h2>
+				<div class="step-desc">
+					<p>Чтобы ускорить оформление, в&nbsp;сервисе предусмотрен автоподбор адреса и&nbsp;адресная книга.</p>
+					<p class="mb0">Пользователь может:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— выбрать адрес из&nbsp;сохранённых,</li>
+						<li class="step-desc-list-item lh16">— добавить новый,</li>
+						<li class="step-desc-list-item lh16">— использовать адресную книгу в&nbsp;повторных отправках.</li>
+					</ul>
+					<p>Это сокращает время заполнения формы и&nbsp;делает повторные сценарии удобнее.</p>
+				</div>
+
+				<div class="work-thumb-wrap img-border">
+					<img src="../images/адреснаякнига.webp" class="work-thumb" alt="FE адресная книга и автоподбор">
+				</div>
+
+				<h2 class="step-heading">Состояния формы и ошибки</h2>
+				<div class="step-desc">
+					<p class="mb0">В интерфейсе предусмотрены разные состояния ошибок:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— неверный номер телефона,</li>
+						<li class="step-desc-list-item lh16">— не&nbsp;заполнено имя получателя,</li>
+						<li class="step-desc-list-item lh16">— адрес не&nbsp;найден,</li>
+						<li class="step-desc-list-item lh16">— нет доступных временных слотов,</li>
+						<li class="step-desc-list-item lh16">— нет пунктов выдачи поблизости.</li>
+					</ul>
+					<p>Ошибки отображаются рядом с&nbsp;полями и&nbsp;помогают пользователю быстро исправить данные, не&nbsp;прерывая сценарий.</p>
+				</div>
+
+				<div class=" flow-scroll">
+					<img src="../images/состформы.webp" class="flow-image" alt="FE состояния расчёта">
+				</div>
+				<p class="image-caption">Состояния формы и ошибки</p>
+
+				<h2 class="step-heading">Оплата</h2>
+				<div class="step-desc">
+					<p>После заполнения данных пользователь переходит к&nbsp;оплате.</p>
+					<p class="mb0">Доступны несколько способов:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— банковская карта,</li>
+						<li class="step-desc-list-item lh16">— СБП,</li>
+						<li class="step-desc-list-item lh16">— наличные курьеру.</li>
+					</ul>
+					<p>На&nbsp;экране оплаты пользователь видит итоговую сумму, детали заказа и&nbsp;способы оплаты в&nbsp;одном контексте.</p>
+				</div>
+
+				<div class="work-thumb-wrap img-border">
+					<img src="../images/оплата.webp" class="work-thumb" alt="FE экран оплаты">
+				</div>
+				<p class="image-caption">Экран оплаты</p>
+
+				<h2 class="step-heading">Состояния оплаты</h2>
+				<div class="step-desc">
+					<p class="mb0">Для оплаты я&nbsp;также предусмотрел дополнительные состояния:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— обработка платежа,</li>
+						<li class="step-desc-list-item lh16">— ошибка оплаты.</li>
+					</ul>
+					<p>Если платёж не&nbsp;проходит, пользователь может попробовать снова или выбрать другой способ оплаты.</p>
+				</div>
+
+				<div class="works-grid">
+					<div class="work-thumb-wrap">
+						<img src="../images/оплатаобработка.webp" class="work-thumb img-border" alt="FE состояния оплаты">
+						<p class="image-caption">Обработка платежа</p>
+					</div>
+					<div class="work-thumb-wrap">
+						<img src="../images/ошибкаоплаты.webp" class="work-thumb img-border" alt="FE состояния оплаты">
+						<p class="image-caption">Ошибка оплаты</p>
+					</div>
+				</div>
+
+				<h2 class="step-heading">Подтверждение заказа</h2>
+				<div class="step-desc">
+					<p>После успешной оплаты пользователь видит экран подтверждения.</p>
+					<p class="mb0">На&nbsp;нём отображаются:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— номер заказа,</li>
+						<li class="step-desc-list-item lh16">— детали отправки,</li>
+						<li class="step-desc-list-item lh16">— дата забора,</li>
+						<li class="step-desc-list-item lh16">— ожидаемая дата доставки,</li>
+						<li class="step-desc-list-item lh16">— дальнейшие шаги.</li>
+					</ul>
+					<p>Этот экран подтверждает действие пользователя и&nbsp;сразу объясняет, что будет происходить дальше.</p>
+				</div>
+
+				<div class="work-thumb-wrap img-border">
+					<img src="../images/успешоплата.webp" class="work-thumb" alt="FE подтверждение заказа">
+				</div>
+				<p class="image-caption">Подтверждение оплаты и заказа</p>
+
+				<h2 class="step-heading">Отслеживание доставки</h2>
+				<div class="step-desc">
+					<p>После оформления пользователь может отслеживать посылку в&nbsp;реальном времени.</p>
+					<p class="mb0">Экран показывает:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— маршрут доставки,</li>
+						<li class="step-desc-list-item lh16">— текущий статус,</li>
+						<li class="step-desc-list-item lh16">— историю статусов,</li>
+						<li class="step-desc-list-item lh16">— ожидаемую дату доставки.</li>
+					</ul>
+					<p>Пользователь также получает SMS и&nbsp;email-уведомления при изменении статуса.</p>
+				</div>
+
+				<div class="work-thumb-wrap img-border">
+					<img src="../images/отслеживание.webp" class="work-thumb" alt="FE отслеживание доставки">
+				</div>
+				<p class="image-caption">Экран трекинга посылки</p>
+
+				<h2 class="step-heading">Личный кабинет</h2>
+				<div class="step-desc">
+					<p>В&nbsp;личном кабинете пользователь может управлять своими отправлениями и&nbsp;данными.</p>
+					<p class="mb0">Доступные разделы:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— мои отправления,</li>
+						<li class="step-desc-list-item lh16">— отслеживание,</li>
+						<li class="step-desc-list-item lh16">— профиль,</li>
+						<li class="step-desc-list-item lh16">— адресная книга,</li>
+						<li class="step-desc-list-item lh16">— способы оплаты,</li>
+						<li class="step-desc-list-item lh16">— уведомления.</li>
+					</ul>
+					<p>Здесь можно отслеживать текущие заказы, повторять отправки и&nbsp;быстро использовать сохранённые данные.</p>
+				</div>
+
+				<div class="works-grid">
+					<div class="work-thumb-wrap">
+						<img src="../images/моиотправления.webp" class="work-thumb img-border" alt="FE личный кабинет">
+						<p class="image-caption">Экран отправлений пользователя</p>
+					</div>
+					<div class="work-thumb-wrap">
+						<img src="../images/деталиотправления.webp" class="work-thumb img-border" alt="FE личный кабинет">
+						<p class="image-caption">Детали отправления</p>
+					</div>
+				</div>
+
+				<h2 class="step-heading">Повтор отправки</h2>
+				<div class="step-desc">
+					<p>Чтобы упростить повторные сценарии, в&nbsp;сервисе можно повторить предыдущий заказ.</p>
+					<p class="mb0">Система автоматически подставляет:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— маршрут,</li>
+						<li class="step-desc-list-item lh16">— данные отправителя,</li>
+						<li class="step-desc-list-item lh16">— данные получателя,</li>
+						<li class="step-desc-list-item lh16">— адреса и&nbsp;основные параметры посылки.</li>
+					</ul>
+					<p>Пользователь может изменить их&nbsp;перед оформлением, если это нужно.</p>
+				</div>
+
+				<div class="work-thumb-wrap img-border">
+					<img src="../images/повторитьотправку.webp" class="work-thumb" alt="FE повтор отправки">
+				</div>
+				<p class="image-caption">Экран повторной отправки</p>
+
+				<h2 class="step-heading">Отмена отправки</h2>
+				<div class="step-desc">
+					<p>Пользователь может отменить заказ до&nbsp;выезда курьера.</p>
+					<p>Перед отменой появляется подтверждение с&nbsp;информацией о&nbsp;возврате средств. После отмены пользователь видит отдельный экран со&nbsp;статусом заказа и&nbsp;сроками возврата денег на&nbsp;карту.</p>
+				</div>
+
+				<div class="works-grid">
+					<div class="work-thumb-wrap">
+						<img src="../images/отменаотправления.webp" class="work-thumb img-border" alt="FE отмена отправки">
+						<p class="image-caption">Модальное окно отмены отправки</p>
+					</div>
+					<div class="work-thumb-wrap">
+						<img src="../images/отправлениеотменено.webp" class="work-thumb img-border" alt="FE отмена отправки">
+						<p class="image-caption">Экран отменённого отправления</p>
+					</div>
+				</div>
+
+
+				<h2 class="step-heading">UX-решения</h2>
+				<div class="step-desc">
+					<p class="mb0">При проектировании сервиса я&nbsp;сфокусировался на&nbsp;нескольких ключевых UX-решениях:</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— прозрачный расчёт стоимости,</li>
+						<li class="step-desc-list-item lh16">— понятный выбор способа отправки и&nbsp;получения,</li>
+						<li class="step-desc-list-item lh16">— автоподбор адреса и&nbsp;адресная книга,</li>
+						<li class="step-desc-list-item lh16">— обработка ошибок без разрыва сценария,</li>
+						<li class="step-desc-list-item lh16">— отслеживание доставки в&nbsp;реальном времени,</li>
+						<li class="step-desc-list-item lh16">— удобные повторные сценарии через личный кабинет.</li>
+					</ul>
+					<p>Эти решения помогают пользователю пройти путь от&nbsp;расчёта до&nbsp;получения посылки быстро и&nbsp;предсказуемо.</p>
+				</div>
+
+				<div class="work-thumb-wrap img-border">
+					<img src="../images/дизайнсистема.webp" class="work-thumb" alt="FE дизайн-система">
+				</div>
+
+				<div class="work-thumb-wrap img-border mt50">
+					<img src="../images/компоненты.webp" class="work-thumb" alt="FE дизайн-система">
+				</div>
+
+				<h2 class="step-heading">Результат</h2>
+				<div class="step-desc">
+					<p class="mb0">В результате получился сервис, который позволяет полностью оформить доставку онлайн.</p>
+					<ul class="step-desc-list">
+						<li class="step-desc-list-item">— рассчитать стоимость доставки,</li>
+						<li class="step-desc-list-item lh16">— выбрать удобный способ отправки,</li>
+						<li class="step-desc-list-item lh16">— оформить отправку за&nbsp;несколько минут,</li>
+						<li class="step-desc-list-item lh16">— отслеживать посылку на&nbsp;каждом этапе.</li>
+					</ul>
+					<p>Сервис делает процесс доставки простым, прозрачным и&nbsp;предсказуемым.</p>
+				</div>
+
+			</div>
+			<nav class="project-page-nav mb50">
+				<a href="../index.html#web" class="project-page-nav-link">← Все проекты</a>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>

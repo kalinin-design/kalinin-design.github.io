@@ -224,6 +224,45 @@ body {
   font-size: 16px;
 }
 
+.mb0 {
+  margin-bottom: 0;
+}
+
+.lh16 {
+    line-height: 1.6;
+}
+
+.step-heading {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.step-desc-list {
+  padding-left: 5px;
+  margin-bottom: 30px;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.flow-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.flow-image {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: 750px;
+}
+
+.image-caption {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
 @keyframes heroFadeUp {
   from {
     opacity: 0;
@@ -318,7 +357,7 @@ body {
 }
 
 .step-desc {
-  font-size: 30px;
+  font-size: 22px;
   color: #333;
   margin-bottom: 40px;
   font-weight: 300;
