@@ -235,6 +235,8 @@ body {
 .step-heading {
   font-size: 40px;
   font-weight: 600;
+  margin-bottom: 25px;
+  line-height: 1;
 }
 
 .step-desc-list {
@@ -261,6 +263,21 @@ body {
     font-size: 18px;
     font-weight: 300;
     margin-top: 10px;
+}
+
+.subheading {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.p-heading {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 10px;
 }
 
 @keyframes heroFadeUp {
