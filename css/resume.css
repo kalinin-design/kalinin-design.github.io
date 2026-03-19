@@ -247,6 +247,15 @@ a:hover{ text-decoration: underline; }
 }
 .cv__back:hover{ text-decoration: underline; }
 
+.cv-text_proj {
+    margin-top: 10px;
+    margin-bottom: 5px;
+ }
+
+.bureau-cred {
+    font-size: 14px;
+    font-style: italic;
+}
 /* Responsive */
 @media (max-width: 740px){
     .nav{ gap: 10px 14px; }
