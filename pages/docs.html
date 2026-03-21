@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение для хранения документов</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <nav class="project-page-nav">
+                <a href="../index.html#web" class="project-page-nav-link">← Все проекты</a>
+            </nav>
+            <div class="project-main">
+                <h1 class="project-title">DOCS</h1>
+                <span class="subheading">Приложение для хранения документов</span>
+                <div class="work-thumb-wrap img-border mt50">
+                    <img src="../images/docs/headingpic.webp" class="work-thumb" alt="DOCS все экраны">
+                </div>
+                <div class="step-desc mt50">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Задание</td>
+                                <td>  — приложение для сканирования
+                                    и&nbsp;хранения документов</td>
+                            </tr>
+                            <tr>
+                                <td>Платформа</td>
+                                <td>  — iOS</td>
+                            </tr>
+                            <tr>
+                                <td>Инструмент  </td>
+                                <td>  — Figma</td>
+                            </tr>
+                            <tr>
+                                <td>Экранов</td>
+                                <td>  — 15</td>
+                            </tr>
+                            <tr>
+                                <td>Школа</td>
+                                <td>  — Бюро Горбунова, вторая ступень, 20 поток</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="step-heading">Задание</h2>
+                <div class="step-desc">
+                    <p>Спроектировать интерфейс приложения для&nbsp;сканирования, распознавания и&nbsp;поиска данных документов.
+                        Пользователь фотографирует документ — приложение распознаёт поля. Поиск мгновенно находит любое значение.</p>
+                </div>
+                <h2 class="step-heading">Курсовая и переосмысление</h2>
+                <div class="step-desc">
+                    <p>На курсе задание было — нарисовать 3–5 экранов которые демонстрируют ключевые сценарии.
+                        Я&nbsp;сдал пять экранов: список документов, добавление через сканирование, форма ввода, детальный экран, поиск.</p>
+                    <p class="mb0">Преподаватель отметил конкретные проблемы:</p>
+                    <ul class="step-desc-list">
+                        <li class="step-desc-list-item">— Подчёркнутые ссылки вместо кнопок для действий — паттерн веба, не&nbsp;мобилки.</li>
+                        <li class="step-desc-list-item lh16">— Экран-переходник после сканирования с&nbsp;кнопкой «Добавить вручную» —
+                            логика сломана: документ уже&nbsp;добавлен, зачем&nbsp;предлагать добавить снова?</li>
+                        <li class="step-desc-list-item lh16">— Разные паттерны карточек в&nbsp;списке и&nbsp;в&nbsp;поиске — одно и&nbsp;то&nbsp;же&nbsp;содержимое, два разных компонента.</li>
+                    </ul>
+                    <div class="work-thumb-wrap img-border mt50">
+                        <img src="../images/docs/old.webp" class="work-thumb" alt="DOCS первая версия">
+                    </div>
+                    <p class="image-caption">Версия времён курса. Базовый флоу есть, но&nbsp;паттерны непоследовательны, а&nbsp;некоторые решения сломаны логически.</p>
+                    <p>После курса я&nbsp;вернулся к&nbsp;работе и&nbsp;решил не&nbsp;просто починить замечания, а&nbsp;переосмыслить продукт целиком.
+                        Вопрос стал другим: не&nbsp;«как нарисовать пять экранов», а&nbsp;«каким должно быть это&nbsp;приложение, если&nbsp;делать правильно?»</p>
+                    <p>Это потребовало начать сначала — с&nbsp;концепции, а&nbsp;не&nbsp;с&nbsp;правки экранов.</p>
+                    <h3>Что изменилось принципиально</h3>
+                    <p>Курсовая версия — пассивное хранилище. Открыл, нашёл, скопировал. Переработанная версия — умный инструмент.
+                        Приложение помнит, что&nbsp;ты&nbsp;искал, показывает истекающие документы, даёт два режима копирования для&nbsp;двух разных сценариев.</p>
+                    <p>Объём тоже вырос: пять экранов → пятнадцать. Но&nbsp;не&nbsp;потому&nbsp;что&nbsp;нужно было&nbsp;показать больше.
+                        А&nbsp;потому&nbsp;что&nbsp;пять экранов без&nbsp;состояний ошибок, без&nbsp;онбординга, без&nbsp;настроек безопасности —
+                        это&nbsp;не&nbsp;продукт, а&nbsp;скетч продукта.</p>
+                </div>
+                <h2 class="step-heading">Контекст</h2>
+                <div class="step-desc">
+                    <p>Пришёл на&nbsp;почту получать посылку — паспорт дома.
+                        Нужен ВИН для&nbsp;заказа запчасти — техпаспорт в&nbsp;другом конце квартиры. Хочешь войти в&nbsp;Госуслуги — забыл где&nbsp;СНИЛС.</p>
+                    <p>Это не редкие ситуации. Это&nbsp;происходит постоянно.</p>
+                    <p>Задача приложения — не&nbsp;«управление документами». Задача — дать нужные данные за&nbsp;десять секунд, стоя на&nbsp;почте с&nbsp;телефоном в&nbsp;руке.
+                        Это&nbsp;определило все&nbsp;дизайн-решения.</p>
+                </div>
+                <h2 class="step-heading">Главный инсайт</h2>
+                <div class="works-grid-mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/mydocs.webp" class="work-thumb no-bg" alt="DOCS недавние документы">
+                        <p class="image-caption">Недавно скопированные поля — сразу на&nbsp;главном экране. Открыл приложение — данные уже&nbsp;видны.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Большинство приложений-хранилищ пассивные: ты&nbsp;сам&nbsp;идёшь искать нужное. Умное приложение должно понимать, что&nbsp;тебе понадобится. <br> <br>
+                            Секция «Недавние» на&nbsp;главном экране — это&nbsp;и&nbsp;есть&nbsp;главная UX-идея. Если&nbsp;вчера ты&nbsp;копировал серию паспорта — сегодня она&nbsp;на&nbsp;экране без&nbsp;единого тапа.
+                            Приложение помнит паттерн использования.</p>
+                    </div>
+                </div>
+                <h2 class="step-heading">Структура флоу</h2>
+                <div class="step-desc">
+                    <p class="mb0">Пять сценариев, которые&nbsp;нужно было&nbsp;закрыть:</p>
+                    <p class="first-list-el"><i>Найти данные быстро</i> — открыл, начал вводить в&nbsp;поиск, скопировал. Три действия, десять секунд.</p>
+                    <p><i>Добавить документ</i> — сфотографировал, приложение распознало, проверил поля. Ручной ввод как&nbsp;запасной вариант.</p>
+                    <p><i>Посмотреть документ целиком</i> — все поля сразу, удобно для&nbsp;заполнения анкет.</p>
+                    <p><i>Повторное использование</i> — недавние поля на&nbsp;главной, быстрое копирование тапом.</p>
+                    <p><i>Безопасность</i> — разблокировка по лицу, автоблокировка, данные только на устройстве.</p>
+                </div>
+                <h2 class="step-heading">Ключевые решения</h2>
+                <h3>Поиск как центр продукта</h3>
+                <div class="works-grid-mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/seach.webp" class="work-thumb no-bg" alt="DOCS поиск">
+                        <p class="image-caption">Поиск работает по&nbsp;названию документа и&nbsp;по&nbsp;данным внутри. «сни» → СНИЛС с&nbsp;номером.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Поиск — не&nbsp;фича сбоку. Это&nbsp;основной способ взаимодействия для&nbsp;человека, который&nbsp;уже&nbsp;знает, что&nbsp;ищет.
+                            Строка поиска всегда видна на&nbsp;главном экране — не&nbsp;спрятана за&nbsp;кнопкой.</p>
+                        <p>Результаты поиска показывают те&nbsp;же&nbsp;карточки, что&nbsp;и&nbsp;список — не&nbsp;новый паттерн, не&nbsp;ссылки. Один компонент везде.</p>
+                    </div>
+                </div>
+                <h3>Сканирование с прогрессом</h3>
+                <div class="works-grid-mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/scan.webp" class="work-thumb no-bg" alt="DOCS скан">
+                        <p class="image-caption">Минимум UI. Прогресс-бар внизу показывает, что&nbsp;распознавание идёт.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Во время съёмки интерфейс не&nbsp;мешает — только рамка документа и&nbsp;прогресс.
+                            Никаких плашек и&nbsp;рамок поверх документа: они создают ощущение, что&nbsp;приложение тупит.</p>
+                        <p>Автосъёмка, когда документ в&nbsp;фокусе — пользователю не&nbsp;нужно нажимать кнопку.</p>
+                    </div>
+                </div>
+                <h3>Проверка распознавания</h3>
+                <div class="works-grid-mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/check.webp" class="work-thumb no-bg" alt="DOCS проверка">
+                        <p class="image-caption">Поля разбиты на&nbsp;две группы: «Реквизиты» и&nbsp;«Личные данные». Пользователь проверяет и&nbsp;правит, если&nbsp;нужно.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Явная кнопка «Сохранить» в&nbsp;навбаре — исключение из&nbsp;правила автосохранения.
+                            Распознавание требует осознанного подтверждения: система могла ошибиться, пользователь должен это&nbsp;проверить.</p>
+                    </div>
+                </div>
+                <h3>Результат распознавания</h3>
+                <div class="works-grid-mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/success.webp" class="work-thumb no-bg" alt="DOCS проверка">
+                        <p class="image-caption">После сохранения — сразу детальный экран документа. Тост внизу подтверждает: сохранилось.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Можно было сделать отдельный экран успеха с&nbsp;большой галочкой и&nbsp;кнопкой "Готово".
+                            Но&nbsp;это&nbsp;лишний шаг — пользователь нажимает «Готово» и&nbsp;оказывается на&nbsp;том&nbsp;же&nbsp;детальном экране.</p>
+                        <p>Поэтому: сохранение → сразу детальный экран. Пользователь видит результат и&nbsp;может сразу проверить данные или&nbsp;скопировать нужное поле.
+                            Тост внизу и&nbsp;галочка в&nbsp;навбаре (появляется на пару секунд) дают достаточный сигнал, что&nbsp;всё&nbsp;прошло успешно — без&nbsp;прерывания сценария.</p>
+                    </div>
+                </div>
+                <h3>Быстрое копирование</h3>
+                <div class="works-grid-2mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/overflow.webp" class="work-thumb no-bg" alt="DOCS оверфлоу">
+                        <p class="image-caption">Долгий тап или тап на оверфлоу меню — шторка с вариантами.</p>
+                    </div>
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/feedback.webp" class="work-thumb no-bg" alt="DOCS скопировано">
+                        <p class="image-caption">Тап на поле или иконку — скопировалось.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Два режима копирования для&nbsp;двух сценариев. Быстрый тап — для&nbsp;стандартного случая: нужно просто скопировать значение.
+                            Долгий тап — для сложного: нужно скопировать с названием поля для заполнения анкеты («Серия и номер: 4504 005287»).</p>
+                        <p>Toast внизу подтверждает действие — без&nbsp;модальных окон, без&nbsp;прерывания сценария.</p>
+                    </div>
+                </div>
+                <h3>Документы, которые стареют</h3>
+                <div class="works-grid-mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/expires.webp" class="work-thumb no-bg" alt="DOCS доки истекают">
+                        <p class="image-caption">Паспорт истекает через 47 дней — приложение об&nbsp;этом&nbsp;знает. Истёкший документ — красный.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Это делает приложение живым инструментом, а&nbsp;не&nbsp;архивом. Хранилище, которое молчит, пока&nbsp;паспорт не&nbsp;перестал работать — плохой продукт.</p>
+                    </div>
+                </div>
+                <h3>Безопасность через прозрачность</h3>
+                <div class="works-grid-2mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/lock.webp" class="work-thumb no-bg" alt="DOCS заблокировано">
+                        <p class="image-caption">Биометрический замок при&nbsp;входе.</p>
+                    </div>
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/settings.webp" class="work-thumb no-bg" alt="DOCS настройки">
+                        <p class="image-caption">В настройках дисклеймер, что&nbsp;документы хранятся только на&nbsp;устройстве пользователя.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Данные документов — чувствительная информация. Доверие строится не&nbsp;через мелкий шрифт в&nbsp;политике конфиденциальности, а&nbsp;через явные сигналы в&nbsp;самом интерфейсе.
+                            Фраза про&nbsp;данные — в&nbsp;настройках, крупно, без&nbsp;юридического языка.</p>
+                        <p>Автоблокировка настраивается: от&nbsp;«30 секунд» до&nbsp;«5 минут». Пользователь выбирает баланс между безопасностью и&nbsp;удобством сам.
+                            Стандартное «Никогда», как в&nbsp;системе, решил не&nbsp;добавлять, для&nbsp;безопасности лучше ограничить.</p>
+                    </div>
+                </div>
+                <h3>Состояния и ошибки</h3>
+                <div class="works-grid-mob">
+                    <div class="work-thumb-wrap">
+                        <img src="../images/docs/error.webp" class="work-thumb no-bg" alt="DOCS ошибка">
+                        <p class="image-caption">Не распознали — объясняем почему, и что делать. Два пути вперёд: снять ещё раз или ввести вручную.</p>
+                    </div>
+                    <div class="step-desc">
+                        <p>Ошибки — это&nbsp;сценарий, не&nbsp;исключение. Плохое освещение, смазанное фото, неудобный угол — это&nbsp;случается.
+                            Экран ошибки не&nbsp;тупик, а&nbsp;развилка с&nbsp;двумя понятными путями вперёд.</p>
+                    </div>
+                </div>
+                <h2 class="step-heading">Все экраны</h2>
+                <div class="work-thumb-wrap img-border">
+                    <img src="../images/docs/headingpic.webp" class="work-thumb" alt="DOCS все экраны">
+                </div>
+                <h2 class="step-heading">Дизайн-система</h2>
+                <div class="work-thumb-wrap img-border">
+                    <img src="../images/docs/designsys.webp" class="work-thumb" alt="DOCS дизайн система">
+                </div>
+                <h2 class="step-heading">Что сделал бы иначе</h2>
+                <div class="step-desc">
+                    <p>Приложение проектировал без&nbsp;пользовательских интервью — на&nbsp;основе анализа сценариев и&nbsp;здравого смысла.
+                        В&nbsp;реальном проекте первый шаг — это&nbsp;наблюдение за&nbsp;тем,&nbsp;как люди реально ищут данные документов в&nbsp;стрессовых ситуациях.
+                        Это&nbsp;могло&nbsp;бы&nbsp;изменить приоритеты.</p>
+                    <p>Онбординг можно сделать умнее: предложить добавить первый документ прямо в&nbsp;процессе — не&nbsp;после нажатия кнопки на&nbsp;пустом экране, а&nbsp;ка&nbsp;часть первого запуска.</p>
+                </div>
+                <p><i>Проектная работа второй ступени Школы дизайнеров Бюро Горбунова, 20 поток.</i></p>
+            </div>
+            <nav class="project-page-nav mb50">
+                <a href="../index.html#web" class="project-page-nav-link">← Все проекты</a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
