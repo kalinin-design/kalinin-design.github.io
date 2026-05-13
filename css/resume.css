@@ -185,6 +185,12 @@ a:hover{ text-decoration: underline; }
     white-space: nowrap;
 }
 
+.cv-item__team-info {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+}
+
 .cv-sub{
     margin-top: 12px;
 }
@@ -232,7 +238,7 @@ a:hover{ text-decoration: underline; }
 }
 
 .cv__lead{
-    margin: 0 0 6px;
+    margin: 0;
     font-weight: 600;
 }
 
@@ -256,7 +262,13 @@ a:hover{ text-decoration: underline; }
     font-size: 14px;
     font-style: italic;
 }
-/* Responsive */
+
+.cv__edu-info {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
 @media (max-width: 740px){
     .nav{ gap: 10px 14px; }
     .cv-grid{ grid-template-columns: 1fr; }
@@ -264,7 +276,6 @@ a:hover{ text-decoration: underline; }
     .cv-item__time{ white-space: normal; }
 }
 
-/* Print (если захочешь печатать как PDF) */
 @media print{
     .site-header{ padding-top: 0; }
     .nav{ display: none; }
