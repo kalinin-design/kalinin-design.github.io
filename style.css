@@ -590,7 +590,9 @@ p {
 }
 
 @media (max-width: 900px) {
-
+  .content, .works-container, .work-container {
+    width: 100%;
+  }
 
   .top-nav {
     display: none;
@@ -679,6 +681,10 @@ p {
   .contacts-links {
     margin-top: 50px;
   }
+
+  .meta {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 600px) {
@@ -737,6 +743,10 @@ p {
     top: 55px;
     margin-left: 0;
     font-size: 12px;
+  }
+
+  .meta {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
