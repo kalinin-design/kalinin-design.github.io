@@ -28,10 +28,14 @@ body {
 }
 
 .container {
-  max-width: 75%;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
+}
+
+.works-container, .work-container {
+  width: 75%;
+  margin: 0 auto;
 }
 
 .h1-name {
@@ -586,6 +590,8 @@ p {
 }
 
 @media (max-width: 900px) {
+
+
   .top-nav {
     display: none;
   }
