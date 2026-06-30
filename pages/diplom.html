@@ -10,75 +10,110 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
   	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  	<link rel="stylesheet" href="../style.css">
+  	<link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="page">
         <div class="container work-container">
             <nav class="project-page-nav">
 				<a href="../index.html#web" class="project-page-nav-link">← Все проекты</a>
-                <a href="https://piracrl.github.io/zhkh-helper/" class="project-page-nav-link">Потыкаться на сайте</a>
 			</nav>
             <div class="project-main">
-                <h1 class="project-title">Дипломная работа в Бюро Горбунова</h1>
+                <h1 class="project-title">Помощник ЖКХ</h1>
+                <span class="subheading">Система визуальных пособий для жильцов: плакаты и сайт, которые переводят канцелярский ЖКХ-язык на человеческий.</span>
                 <div class="step-desc">
-                    <p>«Помощник ЖКХ» — универсальная система визуальных 
-                        пособий для&nbsp;жильцов многоквартирных домов: плакаты и&nbsp;веб‑сайт, 
-                        переводящие канцелярский ЖКХ‑язык на&nbsp;человеческий. 
-                        ЖК «Парнас» с&nbsp;УК «Строительная высота» пилотный дом для&nbsp;запуска и&nbsp;проверки проекта, 
-                        но&nbsp;решение масштабируемо для&nbsp;любых домов по&nbsp;России.</p>
-                    <p>Жильцы не&nbsp;читают и&nbsp;не&nbsp;понимают официальные уведомления: мелкий шрифт, бюрократические формулировки, 
-                        отсутствие схем — результат проблем и&nbsp;звонков диспетчеру по&nbsp;одним и&nbsp;тем&nbsp;же&nbsp;вопросам.<br>
-                        Идея проекта — создать унифицированный комплект плакатов и&nbsp;онлайн‑справочника, 
-                        который&nbsp;работает для&nbsp;любого ЖК, с&nbsp;возможностью подставить контакты местной УК, график уборки, 
-                        расписание работы и&nbsp;другую полезную информацию.</p>
+                    <p>Дипломный проект в Школе дизайнеров Бюро Горбунова. Арт-директор — Максим Ильяхов.
+                        Тексты — Алина Михайловская, Школа редакторов Бюро. Дизайн, иллюстрации и вёрстка — я.</p>
+                    <a href="https://piracrl.github.io/zhkh-helper/" class="project-page-nav-link">Открыть сайт-справочник →</a>
+                </div>
+                <h2 class="stepheading">Проблема</h2>
+                <div class="step-desc">
+                    <p>Жильцы не читают официальные объявления УК и не понимают их. Мелкий шрифт, бюрократические формулировки,
+                        ни одной схемы — и человек либо игнорирует уведомление, либо звонит диспетчеру по вопросу, ответ на который висит у него перед глазами.</p>
                 </div>
                 <div class="works-grid">
                     <div class="work-thumb-wrap mt50">
-                        <img src="../images/obyava1.webp" class="work-thumb" alt="Пример типичного объявления">
+                        <img src="../images/diplom/poster-ad-2.webp" class="work-thumb" alt="Пример типичного объявления">
                     </div>
                     <div class="work-thumb-wrap mt50">
-                        <img src="../images/obyava.webp" class="work-thumb" alt="Пример типичного объявления">
+                        <img src="../images/diplom/poster-ad-1.webp" class="work-thumb" alt="Пример типичного объявления">
                     </div>
                 </div>
+                <p class="image-caption">Типичное объявление в подъезде. Скорее всего, что-то подобное вы видели и в своём доме.</p>
                 <div class="step-desc">
-                    <p>Примеры типичных объявлений в&nbsp;ЖК. Скорее всего, в&nbsp;своем доме вы&nbsp;видели что-то&nbsp;подобное.</p>
+                    <p>В результате УК тонет в повторяющихся звонках по одним и тем же темам — свет, вода, мусор,
+                        прописка — а жильцы остаются без понятных ответов.</p>
                 </div>
+                <h2 class="stepheading">Исследование</h2>
                 <div class="step-desc">
-                    <p>Проект делали вдвоём: я&nbsp;занимался дизайном и&nbsp;вёрсткой, Алина Михайловская (студентка школы редакторов Бюро) — написала классные тексты, перевела канцеляризмы в&nbsp;живой язык. Артдиректор Максим Ильяхов.
-Перебрали десятки ЖК&nbsp;Москвы, Питера и&nbsp;Екатеринбурга, вычленили типовые проблемы (свет, вода, мусор, прописка) и&nbsp;сделали модульную систему плакатов под&nbsp;разные сценарии.</p>
+                    <p>Чтобы понять, какие проблемы повторяются от дома к дому, мы разобрали объявления
+                        и регламенты в 60 жилых комплексах Москвы, Петербурга и Екатеринбурга.</p>
+                    <p>Вычленили типовые сценарии, которые встречаются почти везде: что делать при аварии,
+                        как и куда сдавать показания счётчиков, правила по мусору и парковке, тишина, регистрация.
+                        Это и стало картой того, что система должна закрывать.</p>
+                    <p>Главный вывод исследования: проблема не в конкретном доме, а в самом языке коммуникации между УК и жильцом.
+                        Значит, и решение должно быть не разовым плакатом для одного ЖК, а <b>переносимой системой</b>, которую можно поставить в любой дом, подставив местные контакты и правила.</p>
+                </div>
+                <h2 class="stepheading">Решение: модульная система</h2>
+                <div class="step-desc">
+                    <p>Я собрал систему из 11 плакатов, закрывающих 11 типовых сценариев. Все построены по единой структуре:</p>
+                    <p>1. Иллюстрация, которая объясняет смысл с первого взгляда.</p>
+                    <p>2. Короткий конкретный заголовок.</p>
+                    <p>3. Текст на человеческом языке (за него отвечала Алина).</p>
+                    <p>4. Контакты и QR-код на сайт-справочник.</p>
                 </div>
                 <div class="works-grid">
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/plakat-1.webp" class="work-thumb" alt="Плакат про личные вещи">
+                        <img src="../images/diplom/poster-stuff.webp" class="work-thumb" alt="Плакат про личные вещи">
                     </div>
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/plakat-2.webp" class="work-thumb" alt="Плакат про канализацию">
+                        <img src="../images/diplom/poster-sewer.webp" class="work-thumb" alt="Плакат про канализацию">
                     </div>
                 </div>
+                <p class="image-caption">Единая структура держит систему цельной: разные темы — один узнаваемый формат.</p>
                 <div class="step-desc">
-                    <p>Все плакаты сделали в&nbsp;единой структуре. Сначала иллюстрация, объясняющая смысл плаката. Ниже четкий и&nbsp;краткий заголовок.
-                        Затем понятный текст на&nbsp;человеческом языке. Внизу необходимые контакты и&nbsp;QR-код на&nbsp;сайт с&nbsp;полезными инструкциями.
-                        Все иллюстрации для&nbsp;сайта и&nbsp;плакатов я&nbsp;нарисовал сам.
-                    </p>
+                    <p>Все иллюстрации нарисовал сам, в едином векторном стиле — это позволяет добавлять
+                        новые плакаты под новые сценарии, не ломая систему.</p>
+                </div>
+                <h2 class="stepheading">Сайт-справочник</h2>
+                <div class="step-desc">
+                    <p>Плакат отвечает на один вопрос здесь и сейчас. Полную информацию собрал <a href="https://piracrl.github.io/zhkh-helper/">cайт «Помощник ЖКХ»</a>:
+                        навигация по темам, инструкции для жильцов, и главное — возможность подставить контакты конкретной УК, график уборки и локальные правила.</p>
+                    <p>Это не сайт одного дома, а <b>шаблон под масштабирование</b>: разворачивается в любом ЖК заменой контента, без переделки.</p>
+                </div>
+                <h2 class="stepheading">Внедрение</h2>
+                <div class="step-desc">
+                    <p>Большинство УК из тех, что мы обошли, были готовы повесить готовые плакаты — но не участвовать в разработке.
+                        УК «Строительная высота» (ЖК «Парнас») согласилась работать с нуля и стала пилотным домом.</p>
+                    <p>Результат внедрили: плакаты висят в подъезде. Это не концепт — система прошла путь от исследования до реальной стены реального дома.</p>
                 </div>
                 <div class="step-desc">
-                    <p><a href="https://piracrl.github.io/zhkh-helper/">Сайт «Помощник ЖКХ»</a> собрал все&nbsp;инструкции в&nbsp;навигацию по&nbsp;темам, с&nbsp;возможностью менять контакты УК 
-                        и&nbsp;добавлять локальные правила — готовый шаблон для&nbsp;масштабирования, можно применять в&nbsp;любом доме.</p>
+                    <p>Из обратной связи: несколько жильцов отметили, что новые плакаты понятнее прежних объявлений.
+                        Системного замера мы не проводили — это честно оставляю как ограничение пилота, а не как доказанный результат.</p>
                 </div>
+                <h2 class="stepheading">Что дальше</h2>
                 <div class="step-desc">
-                    <p>Почти все&nbsp;УК были&nbsp;готовы сотрудничать, если&nbsp;мы&nbsp;принесём им&nbsp;уже&nbsp;готовые плакаты. 
-                        Строительная высота согласилась поработать с&nbsp;нами с&nbsp;нуля, поэтому она&nbsp;и&nbsp;стала пробным полигоном. 
-                        Результат им&nbsp;понравился, плакаты повесили в&nbsp;подъезде. Алина в&nbsp;процессе даже успела получить обратную связь от&nbsp;пары жильцов, они&nbsp;положительно оценили новые плакаты.
-                        Теперь можно заниматься масштабированием и&nbsp;попробовать продавать идею, стоит сходить в&nbsp;ЖКшки ещё раз.
-                    </p>
+                    <p>Пилот показал, что система работает и переносима. Следующие шаги, которые я вижу для проекта:</p>
+                    <p>Размещение по логике дома, а не на одном стенде: плакат про личные вещи — на этажах у квартир,
+                        про окурки — у общих балконов, напоминание о датах сдачи счётчиков — в лифте.
+                        Информация должна стоять там, где возникает вопрос.</p>
+                    <p>Единое оформление стенда вместо стандартного, чтобы система выглядела цельно и в физическом пространстве.</p>
+                    <p>Лендинг проекта для УК — чтобы продавать решение другим домам.</p>
+                    <p>Доработка сайта-справочника до полноценного продукта.</p>
+                    <p>Проект живой, и я продолжаю его развивать — это не закрытая тема, а система, у которой есть следующий шаг.</p>
+                </div>
+                <h2 class="stepheading">Роль и команда</h2>
+                <div class="step-desc">
+                    <p>Я: концепция, исследование, дизайн системы, все иллюстрации, вёрстка сайта</p>
+                    <p>Алина Михайловская (Школа редакторов Бюро): тексты, перевод канцелярита на человеческий язык</p>
+                    <p>Максим Ильяхов: арт-директор</p>
                 </div>
                 <div class="works-grid">
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/plakat-do.webp" class="work-thumb" alt="Как выглядел стенд раньше">
+                        <img src="../images/diplom/poster-stand-before.webp" class="work-thumb" alt="Как выглядел стенд раньше">
                     </div>
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/plakat-posle.webp" class="work-thumb" alt="Как выглядит сейчас">
+                        <img src="../images/diplom/poster-stand-after.webp" class="work-thumb" alt="Как выглядит сейчас">
                     </div>
                 </div>
                 <div class="step-desc">
@@ -91,47 +126,47 @@
                 </div>
                 <div class="works-grid">
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/канализация.webp" class="work-thumb" alt="Плакат канализация">
+                        <img src="../images/diplom/poster-sewer.webp" class="work-thumb" alt="Плакат канализация">
                     </div>
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/лифты.webp" class="work-thumb" alt="Плакат лифты">
-                    </div>
-                </div>
-                <div class="works-grid">
-                    <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/вещи.webp" class="work-thumb" alt="Плакат вещи">
-                    </div>
-                    <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/мусор.webp" class="work-thumb" alt="Плакат мусор">
+                        <img src="../images/diplom/poster-elevator.webp" class="work-thumb" alt="Плакат лифты">
                     </div>
                 </div>
                 <div class="works-grid">
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/собаки.webp" class="work-thumb" alt="Плакат собаки">
+                        <img src="../images/diplom/poster-stuff.webp" class="work-thumb" alt="Плакат вещи">
                     </div>
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/счетчики.webp" class="work-thumb" alt="Плакат счетчики">
-                    </div>
-                </div>
-                <div class="works-grid">
-                    <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/тишина.webp" class="work-thumb" alt="Плакат тишина">
-                    </div>
-                    <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/урна.webp" class="work-thumb" alt="Плакат мусор">
+                        <img src="../images/diplom/poster-garbage.webp" class="work-thumb" alt="Плакат мусор">
                     </div>
                 </div>
                 <div class="works-grid">
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/парковка.webp" class="work-thumb" alt="Плакат парковка">
+                        <img src="../images/diplom/poster-dogs.webp" class="work-thumb" alt="Плакат собаки">
                     </div>
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/чс.webp" class="work-thumb" alt="Плакат ЧС">
+                        <img src="../images/diplom/poster-counters.webp" class="work-thumb" alt="Плакат счетчики">
                     </div>
                 </div>
                 <div class="works-grid">
                     <div class="work-thumb-wrap img-border mt50">
-                        <img src="../images/окно.webp" class="work-thumb" alt="Плакат окно">
+                        <img src="../images/diplom/poster-peace.webp" class="work-thumb" alt="Плакат тишина">
+                    </div>
+                    <div class="work-thumb-wrap img-border mt50">
+                        <img src="../images/diplom/poster-urn.webp" class="work-thumb" alt="Плакат мусор">
+                    </div>
+                </div>
+                <div class="works-grid">
+                    <div class="work-thumb-wrap img-border mt50">
+                        <img src="../images/diplom/poster-parking.webp" class="work-thumb" alt="Плакат парковка">
+                    </div>
+                    <div class="work-thumb-wrap img-border mt50">
+                        <img src="../images/diplom/poster-emergency.webp" class="work-thumb" alt="Плакат ЧС">
+                    </div>
+                </div>
+                <div class="works-grid">
+                    <div class="work-thumb-wrap img-border mt50">
+                        <img src="../images/diplom/poster-window.webp" class="work-thumb" alt="Плакат окно">
                     </div>
                 </div>
             </div>
